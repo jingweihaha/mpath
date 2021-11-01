@@ -53,7 +53,7 @@ jobs:
           environment_name: Springbootwebapi-env
           version_label: v1.0.0
           region: us-east-2
-          deployment_package: target/springcicd2-0.0.1-SNAPSHOT.war
+          deployment_package: target/*.war
           use_existing_version_if_available: true
           existing_bucket_name: elasticbeanstalk-us-east-2-148565102071
 
