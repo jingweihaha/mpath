@@ -1,14 +1,9 @@
 package com.zjw.mpath.service;
 
 import com.zjw.mpath.domain.AccountUser;
-import com.zjw.mpath.repo.AccountRepository;
 import com.zjw.mpath.vo.AccountUserVO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-
-import javax.management.loading.PrivateClassLoader;
-import java.util.List;
 
 /**
  * @author jingw

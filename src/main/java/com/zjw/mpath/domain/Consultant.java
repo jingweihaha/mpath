@@ -13,7 +13,7 @@ import java.util.Set;
  * @project mpath
  */
 @Entity
-@Table("mpath_consultants")
+@Table(name="mpath_consultants")
 @Getter
 @Setter
 public class Consultant {
@@ -23,7 +23,7 @@ public class Consultant {
     @Column(name = "c_id")
     private Long id;
 
-    @Column("c_name")
+    @Column(name="c_name")
     private String consultantName;
 
     @ManyToMany(mappedBy = "consultantSet")

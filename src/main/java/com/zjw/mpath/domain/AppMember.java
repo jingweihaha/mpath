@@ -13,7 +13,7 @@ import java.util.Set;
  * @project mpath
  */
 @Entity
-@Table("mpath_appmember")
+@Table(name="mpath_appmember")
 @Getter
 @Setter
 public class AppMember {
@@ -27,7 +27,7 @@ public class AppMember {
     private String memberName;
 
     @Column(name = "m_dateofbirth")
-    private Date memberDOB;
+    private Date memberDob;
 
     @OneToMany(mappedBy = "appMember")
     private Set<AppProgram> programSet;

@@ -23,10 +23,9 @@ public class AppProgram {
     @Column(name = "p_id")
     private Long id;
 
-    @Column("p_name")
+    @Column(name="p_name")
     private String programName;
 
-    //need to test the cascade type
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "program_consultant_jointable", joinColumns = {@JoinColumn(name = "program_id", referencedColumnName = "p_id")},
     inverseJoinColumns = {@JoinColumn(name = "consultant_id", referencedColumnName = "c_id")})
