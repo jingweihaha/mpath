@@ -5,6 +5,7 @@ import com.zjw.mpath.service.AccountService;
 import com.zjw.mpath.vo.AccountUserVO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @created 11/1/2021 2:34 PM
  * @project mpath
  */
+@Service
 public class AccountServiceImpl implements AccountService {
     @Override
     public AccountUserVO registerNewAccountUser(AccountUser accountUser) {
