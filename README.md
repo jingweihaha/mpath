@@ -17,5 +17,7 @@ thymeleaf with react
     -table sorting and pagination
     -crud
 
+![img.png](er-uml.png)
+
 V2(spring cloud version)
     -we will split user login and member management separately into two 
