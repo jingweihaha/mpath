@@ -4,6 +4,7 @@ import com.zjw.mpath.service.AccountService;
 import com.zjw.mpath.vo.AccountUserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,11 @@ public class AccountController {
 
 //    @Autowired
 //    private AccountService accountService;
+
+    @GetMapping("/greetings")
+    public String greetings(){
+        return "greetings!";
+    }
 
     @PostMapping("/register")
     public String register(@RequestBody @Valid AccountUserVO accountUserVO, BindingResult result){
