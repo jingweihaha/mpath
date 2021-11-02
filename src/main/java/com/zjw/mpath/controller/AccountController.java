@@ -18,8 +18,8 @@ import javax.validation.Valid;
 @RestController
 public class AccountController {
 
-    @Autowired
-    private AccountService accountService;
+//    @Autowired
+//    private AccountService accountService;
 
     @PostMapping("/register")
     public String register(@RequestBody @Valid AccountUserVO accountUserVO, BindingResult result){
