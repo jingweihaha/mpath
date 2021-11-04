@@ -12,7 +12,7 @@ import org.springframework.data.domain.Pageable;
  */
 public interface AccountService {
 
-    AccountUserVO registerNewAccountUser(AccountUser accountUser);
+    AccountUser registerNewAccountUser(AccountUser accountUser);
 
     AccountUserVO modifyAccountUser(AccountUser accountUser);
 
@@ -22,4 +22,5 @@ public interface AccountService {
 
     AccountUser searchAccountUserById(Long id);
 
+    AccountUser findUserByUsername(String username);
 }

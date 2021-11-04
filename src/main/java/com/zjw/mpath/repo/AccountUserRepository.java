@@ -10,4 +10,11 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @project mpath
  */
 public interface AccountUserRepository extends JpaRepository<AccountUser, Long>, JpaSpecificationExecutor<AccountUser> {
+    /**
+     *
+     * @param username
+     * @return AccountUser
+     */
+    AccountUser findAccountUserByUsername(String username);
+
 }
