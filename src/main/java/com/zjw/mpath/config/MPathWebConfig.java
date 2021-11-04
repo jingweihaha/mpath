@@ -1,6 +1,9 @@
 package com.zjw.mpath.config;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
@@ -8,13 +11,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @created 11/2/2021 4:11 PM
  * @project mpath
  */
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MPathWebConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/login","/register","/test")
-                .permitAll();
+                .antMatchers("/login","/register","/greetings").permitAll()
+                .anyRequest().authenticated();
     }
 }
