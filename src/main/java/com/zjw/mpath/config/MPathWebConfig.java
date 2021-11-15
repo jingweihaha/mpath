@@ -23,7 +23,6 @@ public class MPathWebConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/**/authenticate","/**/register","/**/greetings").permitAll()
-                .antMatchers("/program/save").hasAuthority("Admin")
                 .anyRequest().authenticated();
     }
 
